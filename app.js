@@ -11,10 +11,6 @@ const MongoStore = require('connect-mongo');
 const app = express();
 const port = process.env.PORT;
 
-
-
- 
-
 app.use(require('express-session')({ 
     secret: 'SECRET',
     resave: true,
