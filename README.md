@@ -52,6 +52,20 @@ This is a simple notes application built using Node.js, Express, MongoDB, and Go
 - `PUT /notes/:id`: Update a note by ID.
 - `DELETE /notes/:id`: Delete a note by ID.
 
+## Screenshots
+ - Home Page
+<img src="./assets/Screenshot 2024-02-19 at 12.30.30 AM.jpeg">
+
+- User's Notes
+<img src="./assets/Screenshot 2024-02-19 at 12.31.55 AM.jpeg">
+
+- Update Note
+<img src="./assets/Screenshot 2024-02-19 at 12.32.17 AM.jpeg">
+
+- Delete Note
+<img src="./assets/Screenshot 2024-02-19 at 12.32.21 AM.jpeg">
+
+
 ## Dependencies
 - express
 - mongoose
