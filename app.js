@@ -11,13 +11,16 @@ const MongoStore = require('connect-mongo');
 const app = express();
 const port = process.env.PORT;
 
+let store = new MongoStore({
+    mongoUrl: process.env.MONGODB_URI,
+    collection: "sessions"
+ });
+
 app.use(require('express-session')({ 
     secret: 'SECRET',
     resave: true,
     saveUninitialized: true,
-    store:MongoStore.create({
-        mongoUrl:process.env.MONGODB_URI
-    })
+    store: store
   }));
 app.use(passport.initialize());
 app.use(passport.session());
