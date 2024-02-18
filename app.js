@@ -20,7 +20,7 @@ app.use(require('express-session')({
     resave: true,
     saveUninitialized: true,
     store: MongoStore.create({
-        mongoUrl: "mongodb+srv://namitnayyar007:o1b8RVcdyy52QxfU@cluster0.ejeb3bg.mongodb.net/notes",
+        mongoUrl:process.env.MONGODB_URI,
         secret: 'supersecret',
         touchAfter: 24 * 60 * 60
       })
