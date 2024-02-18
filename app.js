@@ -20,7 +20,9 @@ app.use(require('express-session')({
     resave: true,
     saveUninitialized: true,
     store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI
+        mongoUrl: process.env.MONGODB_URI,
+        secret: 'supersecret',
+        touchAfter: 24 * 60 * 60
       })
   }));
 app.use(passport.initialize());
